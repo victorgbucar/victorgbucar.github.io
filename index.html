@@ -29,7 +29,7 @@
       </style>
 		<!-- Header -->
 			<div id="header">
-        <span id="testa" onmouseover="testaFunc()">Qualquer</span>
+        <span id="testa" onmouseover="testaFunc()" class="logo icon fa-code"></span>
 				<span id="logounique" onmouseover="myFunction()" class="logo icon fa-code"></span>
 				<h1>Hi, I'm Victor.</h1>
 				<p>A Software developer <a href="http://html5up.net"></a>
@@ -296,7 +296,7 @@
         }
 
         function testaFunc() {
-          var testa = document.getElementById("testa").style.fontStyle = "italic";
+          var testa = document.getElementById("testa").classList.remove("fa-code");
           testa.style.fontStyle = "bold";
         }
 
