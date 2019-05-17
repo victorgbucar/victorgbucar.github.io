@@ -28,8 +28,8 @@
       }
       </style>
 		<!-- Header -->
-			<div id="header" onmouseover="myFunction()">
-				<span id="logo" onmouseover="myFunction()" class="logo icon fa-code"></span>
+			<div id="header">
+				<span id="logounique" onmouseover="myFunction()" class="logo icon fa-code"></span>
 				<h1>Hi, I'm Victor.</h1>
 				<p>A Software developer <a href="http://html5up.net"></a>
 				<br />
@@ -290,7 +290,7 @@
     <script>
         function myFunction() {
           var header = document.getElementById("header");
-          var logo = header.getElementsByClassName("logo");
+          var logo = document.getElementsById("logounique");
           logo.classList.remove("fa-code");
         }
         </script>
