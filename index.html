@@ -29,6 +29,7 @@
       </style>
 		<!-- Header -->
 			<div id="header">
+        <span id="testa" onmouseover="testaFunc()">Qualquer</span>
 				<span id="logounique" onmouseover="myFunction()" class="logo icon fa-code"></span>
 				<h1>Hi, I'm Victor.</h1>
 				<p>A Software developer <a href="http://html5up.net"></a>
@@ -293,6 +294,15 @@
           var logo = document.getElementsById("logounique");
           logo.classList.remove("fa-code");
         }
+
+        function testaFunc() {
+          var testa = document.getElementById("testa").style.fontStyle = "italic";
+          testa.style.fontStyle = "bold";
+        }
+
+        document.getElementById("buttonDiv").onmouseover = function() {
+    document.getElementById["divToHide"].style.display = "block";
+};
         </script>
 
 			<script src="assets/js/jquery.min.js"></script>
