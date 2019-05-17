@@ -29,7 +29,7 @@
       </style>
 		<!-- Header -->
 			<div id="header">
-        <span id="logounique" onmouseup="removeClass()" onmouseout="addClass()" class="logo icon fa-code"></span>
+        <span id="logounique" onmouseover="addClassOnmouseOver()" onmouseout="removeClassOnMouseOut()" class="logo icon fa-code"></span>
 				
 				<h1>Hi, I'm Victor.</h1>
 				<p>A Software developer <a href="http://html5up.net"></a>
@@ -289,11 +289,11 @@
     <!-- Scripts -->
     
     <script>
-      function addClass() {
+      function addClassOnmouseOver() {
           var testa = document.getElementById("logounique").classList.remove("fa-code");
           var test = document.getElementById("logounique").classList.add("fa-terminal");
         }
-        function removeClass() {
+        function removeClassOnMouseOut() {
           var testa = document.getElementById("logounique").classList.remove("fa-terminal");
           var test = document.getElementById("logounique").classList.add("fa-code");
         }
