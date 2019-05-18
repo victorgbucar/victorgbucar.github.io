@@ -16,32 +16,64 @@
   </head>
 	<body>
     <style>
-      /* #header .logo:hover{
-        transform: scale(1.5, 1.5);
-        transition-duration: 500ms;
-        
-        transform: rotate(360deg);
-      } */
+      #my-name {
+        position: relative;
+        -webkit-animation-name: my-name; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: my-name;
+        animation-duration: 1s;
+      }
+      #first-p {
+        position: relative;
+        -webkit-animation-name: first-p; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: first-p;
+        animation-duration: 2s;
+      }
+
+      #second-p {
+        position: relative;
+        -webkit-animation-name: my-name; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: my-name;
+        animation-duration: 2.5s;
+      }
       #header a:hover{
         color:rgb(90, 90, 197);
         transform: scale(1.5, 1.5);
+      }
+
+            /* Standard syntax */
+      @keyframes my-name {
+        0%   {left:200px; top:0px;}
+        25%  {left:0px; top:0px;}
+        50%  {left:15px; top:0px;}
+        75%  {left:0px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+      @keyframes first-p {
+        0%   {right:500px; top:0px;}
+        25%  {right:0px; top:0px;}
+        50%  {right:15px; top:0px;}
+        75%  {right:0px; top:0px;}
+        100% {right:0px; top:0px;}
       }
       </style>
 		<!-- Header -->
 			<div id="header">
         <span id="logounique" onmouseover="addClassOnmouseOver()" onmouseout="removeClassOnMouseOut()" class="logo icon fa-code"></span>
 				
-				<h1>Hi, I'm Victor.</h1>
-				<p>A Full Stack Software developer <a href="http://html5up.net"></a>
+				<h1 id="my-name">Hi, I'm Victor.</h1>
+				<p id="first-p">A Full Stack Software developer <a href="http://html5up.net"></a>
 				<br /></p>
-				<p>Scroll down and find out more about me and what i do<a href="http://html5up.net/license"></a>.</p>
+				<p id="second-p">Scroll down and find out more about me and what i do<a href="http://html5up.net/license"></a>.</p>
       
         <ul class="icons" style="margin-top:25px;">
 						<li><a href="tel:0873433140" class="icon fa-phone" ><span class="label">Phone</span></a></li>
             <li><a href="https://github.com/VictorBucar?tab=repositories" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
             <li><a href="https://medium.com/@victor_bucar" target="_blank" class="icon fab fa-medium"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.linkedin.com/in/victor-bucar-839923ba/" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-					</ul>
+				</ul>
       </div>
 
 		<!-- Main -->
@@ -237,15 +269,21 @@
 					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
 					<ul class="actions">
 						<li><a href="#" class="button">Join our crew</a></li>
-					</ul>
-				</footer>
+          </ul>
+          
+        </footer>
+        
+          
 
-			</div>
+      </div>
+        
+			
 
 		<!-- Footer -->
 			<div id="footer">
+        
 				<div class="container 75%">
-
+          
 					<header class="major last">
 						<h2>Questions or comments?</h2>
 					</header>
@@ -253,7 +291,7 @@
 					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
 					orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
 
-					<form method="post" action="#">
+					<form id="myForm" method="post" action="#">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
 								<input type="text" name="name" placeholder="Name" />
@@ -270,14 +308,17 @@
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" onclick="sendForm()" /></li>
 								</ul>
 							</div>
 						</div>
 					</form>
 
 				
-
+          <ul class="icons" >
+              <li><a href="#header" class="icon fa-arrow-up"><span class="label"></span></a></li>
+              <p>Go to the top</p>
+            </ul>
 					<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
@@ -298,7 +339,11 @@
         }
       
         </script>
-
+      <script>
+          function sendForm() {
+            console.log(document.getElementById("myForm").submit());
+          }
+          </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
