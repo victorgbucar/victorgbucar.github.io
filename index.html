@@ -341,7 +341,9 @@
         </script>
       <script>
           function sendForm() {
-            console.log(document.getElementById("myForm").submit());
+            document.getElementById("myForm").submit()
+            var form = document.getElementById("myForm")
+            console.log(form);
           }
           </script>
 			<script src="assets/js/jquery.min.js"></script>
