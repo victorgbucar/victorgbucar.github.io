@@ -348,20 +348,22 @@
 
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
       <script>
+        function sendMail() {
         var form = document.getElementById("myForm");
+
         var templateParams = {
           name: form.name.value,
           notes: form.message.value,
           email: form.email.value
       };
  
-emailjs.send('gmail', 'template_RHmWUelm', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-
+        emailjs.send('gmail', 'template_RHmWUelm', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+        }
         // function sendMail(){
         //   let form = document.getElementById("myForm");
         //   Email.send({
