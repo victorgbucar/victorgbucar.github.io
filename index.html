@@ -291,7 +291,7 @@
 					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
 					orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
 
-					<form id="myForm"  action="email.php">
+					<form id="myForm">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
 								<input type="text" name="name" placeholder="Name" />
@@ -308,7 +308,7 @@
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="button" value="Send Message" onclick="sendForm()"/></li>
+									<li><input type="button" value="Send Message" onclick="sendMail()"/></li>
 								</ul>
 							</div>
 						</div>
@@ -340,20 +340,36 @@
         }
       
         </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
-          function sendForm() {
-           // document.getElementById("myForm").submit();
-           const xhr = new XMLHttpRequest();
-            let form = document.getElementById("myForm");
-            var serverReponse = document.getElementById("serverResponse");
-            serverReponse.innerHTML = this.responseText
+
+
+        function sendMail(){
+          let form = document.getElementById("myForm");
+          Email.send({
+              SecureToken: "61a7efd2-8d44-4a85-b68f-e6886df52e90",
+              To : 'victorbucar@outlook.com',
+              From : form.email.value,
+              Subject : "Message from my web site",
+              Body : form.message.value
+          }).then(
+            message => alert(message)
+          );
+        }
+          
+
+          // function sendForm() {
+          //  // document.getElementById("myForm").submit();
+          //  const xhr = new XMLHttpRequest();
+          //   let form = document.getElementById("myForm");
+          //   var serverReponse = document.getElementById("serverResponse");
+          //   serverReponse.innerHTML = this.responseText
             
-            xhr.open("POST", "email.php")
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlenconded");
-            xhr.send(form.email.value);
-
-
-          }
+          //   xhr.open("POST", "email.php")
+          //   xhr.setRequestHeader("Content-type", "application/x-www-form-urlenconded");
+          //   xhr.send(form.email.value);
+          //}
           </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
