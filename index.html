@@ -18,6 +18,15 @@
           emailjs.init("user_OHahroU2HeRXfUNLSc6FU");
       })();
     </script>
+    <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('myForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+              this.contact_number.value = Math.random() * 100000 | 0;
+              emailjs.sendForm('gmail', 'template_RHmWUelm', this);
+          });
+      }
+    </script>
   </head>
 	<body>
     <style>
@@ -313,7 +322,7 @@
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="button" value="Send Message" onclick="sendMail()"/></li>
+									<li><input type="submit" value="Send Message"/></li>
 								</ul>
 							</div>
 						</div>
@@ -348,22 +357,22 @@
 
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
       <script>
-        function sendMail() {
-        var form = document.getElementById("myForm");
+      //   function sendMail() {
+      //   var form = document.getElementById("myForm");
 
-        var templateParams = {
-          name: 'James',
-          notes: 'check this out',
-          //email: form.email.value
-      };
+      //   var templateParams = {
+      //     name: 'James',
+      //     notes: 'check this out',
+      //     //email: form.email.value
+      // };
  
-        emailjs.send('gmail', 'template_RHmWUelm', templateParams)
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-          console.log('FAILED...', error);
-        });
-        }
+      //   emailjs.send('gmail', 'template_RHmWUelm', templateParams)
+      //   .then(function(response) {
+      //     console.log('SUCCESS!', response.status, response.text);
+      //   }, function(error) {
+      //     console.log('FAILED...', error);
+      //   });
+      //   }
         // function sendMail(){
         //   let form = document.getElementById("myForm");
         //   Email.send({
