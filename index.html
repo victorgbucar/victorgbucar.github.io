@@ -12,7 +12,7 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script type="text/javascript">
       (function(){
           emailjs.init("user_OHahroU2HeRXfUNLSc6FU");
@@ -26,7 +26,7 @@
               emailjs.sendForm('gmail', 'template_RHmWUelm', this);
           });
       }
-    </script>
+    </script> -->
   </head>
 	<body>
     <style>
@@ -322,7 +322,7 @@
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message"/></li>
+									<li><input type="button" value="Send Message" onclick="sendMail()"/></li>
 								</ul>
 							</div>
 						</div>
@@ -355,52 +355,24 @@
       
         </script>
 
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
-      //   function sendMail() {
-      //   var form = document.getElementById("myForm");
-
-      //   var templateParams = {
-      //     name: 'James',
-      //     notes: 'check this out',
-      //     //email: form.email.value
-      // };
- 
-      //   emailjs.send('gmail', 'template_RHmWUelm', templateParams)
-      //   .then(function(response) {
-      //     console.log('SUCCESS!', response.status, response.text);
-      //   }, function(error) {
-      //     console.log('FAILED...', error);
-      //   });
-      //   }
-        // function sendMail(){
-        //   let form = document.getElementById("myForm");
-        //   Email.send({
-        //     SecureToken: "b00b165d-99f8-4e13-bdb8-ba3d99bb3d79",
-        //     // Host : "smtp.gmail.com",
-        //     // Username : "victorbucar@gmail.com",
-        //     // Password : "bright1921",
-        //       To : 'victorbucar@outlook.com',
-        //       From : form.email.value,
-        //       Subject : "Message from my web site",
-        //       Body : form.email.value +form.message.value
-        //   }).then(
-        //     message => alert(message)
-        //   );
-        // }
+     
+        function sendMail(){
+          let form = document.getElementById("myForm");
+          Email.send({
+            SecureToken: "b00b165d-99f8-4e13-bdb8-ba3d99bb3d79",
+            To : 'victorbucar@outlook.com',
+            From : form.email.value,
+            Subject : "Message from my web site",
+            Body : form.email.value + form.message.value
+          }).then(
+            message => alert(message)
+          );
+        }
           
 
-          // function sendForm() {
-          //  // document.getElementById("myForm").submit();
-          //  const xhr = new XMLHttpRequest();
-          //   let form = document.getElementById("myForm");
-          //   var serverReponse = document.getElementById("serverResponse");
-          //   serverReponse.innerHTML = this.responseText
-            
-          //   xhr.open("POST", "email.php")
-          //   xhr.setRequestHeader("Content-type", "application/x-www-form-urlenconded");
-          //   xhr.send(form.email.value);
-          //}
+         
           </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
