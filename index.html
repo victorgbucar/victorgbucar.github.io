@@ -365,7 +365,7 @@
             To : 'victorbucar@outlook.com',
             From : 'victorbucar@gmail.com',
             Subject : "Message from my web site",
-            Body : 'from ' + form.email.value + 'message: ' + form.message.value
+            Body : 'from ' + form.name.value +  '/n' + ' message: ' + form.message.value
           }).then(
             message => alert(message)
           );
