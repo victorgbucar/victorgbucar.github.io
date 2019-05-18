@@ -364,8 +364,8 @@
             SecureToken: "b00b165d-99f8-4e13-bdb8-ba3d99bb3d79",
             To : 'victorbucar@outlook.com',
             From : 'victorbucar@gmail.com',
-            Subject : "Message from my web site",
-            Body : 'from ' + form.name.value +  '/n' + ' message: ' + form.message.value
+            Subject : "Message from my web site : " + form.email.value,
+            Body : 'from ' + form.name.value +  ' ' + ' message: ' + form.message.value
           }).then(
             message => alert(message)
           );
