@@ -348,7 +348,9 @@
         function sendMail(){
           let form = document.getElementById("myForm");
           Email.send({
-              SecureToken: "61a7efd2-8d44-4a85-b68f-e6886df52e90",
+            Host : "smtp.gmail.com",
+            Username : "victorbucar@gmail.com",
+            Password : "bright1921",
               To : 'victorbucar@outlook.com',
               From : form.email.value,
               Subject : "Message from my web site",
