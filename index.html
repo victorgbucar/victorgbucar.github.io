@@ -363,9 +363,9 @@
           Email.send({
             SecureToken: "b00b165d-99f8-4e13-bdb8-ba3d99bb3d79",
             To : 'victorbucar@outlook.com',
-            From : form.email.value,
+            From : 'victorbucar@gmail.com',
             Subject : "Message from my web site",
-            Body : form.email.value + form.message.value
+            Body : 'from ' + form.email.value + 'message: ' + form.message.value
           }).then(
             message => alert(message)
           );
