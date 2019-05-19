@@ -43,6 +43,19 @@
         transform: scale(1.5, 1.5);
       }
 
+			.grid-container {
+				display: grid;
+				grid-template-columns: auto auto auto;
+				background-color: rgba(255, 255, 255, 0.8);
+				padding: 10px;
+			}
+			.grid-item {
+				background-color: rgba(255, 255, 255, 0.8);
+				/* border: 1px solid rgba(0, 0, 0, 0.8); */
+				padding: 20px;
+				font-size: 30px;
+				text-align: center;
+			}
             /* Standard syntax */
       @keyframes my-name {
         0%   {left:200px; top:0px;}
@@ -66,7 +79,7 @@
 				<h1 id="my-name">Hi, I'm Victor.</h1>
 				<p id="first-p">A Full Stack Software developer <a href="http://html5up.net"></a>
 				<br /></p>
-				<p id="second-p">Scroll down and find out more about me and what i do<a href="http://html5up.net/license"></a>.</p>
+				<p id="second-p">Scroll down and find out more about me and what I do<a href="http://html5up.net/license"></a>.</p>
       
         <ul class="icons" style="margin-top:25px;">
 						<li><a href="tel:0873433140" class="icon fa-phone" ><span class="label">Phone</span></a></li>
@@ -94,30 +107,31 @@
 
 				<div class="box alt container">
 					<section class="feature left">
-						<a href="https://github.com/VictorBucar/SchoolConnection" ><img src="images/netcore.png" alt="" /></a>
+						<a href="https://github.com/VictorBucar/SchoolConnection" class="image icon" ><img src="images/netcore.png" alt="" /></a>
 						<div class="content">
-							<h3>Backend Development</h3>
-							<p>Working <b>C#, ASP.NET Core, Entity Framework, Dapper, ADO</b> among several other techonologies like ASP.NET MVC 5 I had the chance to work with <b>software quality</b> utilizing software development best practices responsible for analysing, modeling and developing internal modern web and desktop applications mostly on governmental institutions, working in a wide range of management and decision-making processes. </p>
+							<h3>Back-end Development</h3>
+							<p>Working with <b>C#, ASP.NET Core, Entity Framework, SQL Server, Web API</b> among several other techonologies like <b>ASP.NET MVC 5, ADO, Dapper</b> </p>
 						</div>
 					</section>
 					<section class="feature right">
-						<a href="#" class="image icon fab fa-phone"><img src="images/Angular.jpg" alt="" /></a>
+						<a href="https://github.com/VictorBucar/SchoolConnection"  class="image icon" ><img src="images/Angular.jpg" alt="" /></a>
 						<div class="content">
-							<h3>The Second Thing</h3>
-							<p>Vita natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
+							<h3>Front-end Development</h3>
+							<p>Front-end development of apps using <b><i class="fa fa-laptop-code"></i>Angular, HTML5, CSS3, JavaScript, JQuery, Ajax</b>, and many other <b>JS</b> Libraries.  </p>
 						</div>
 					</section>
 					<section class="feature left">
-						<a href="#" class="image icon fa-mobile"><img src="images/pic03.jpg" alt="" /></a>
+						<a href="https://github.com/VictorBucar" class="image icon"><img src="images/git.png" alt="" /></a>
 						<div class="content">
-							<h3>The Third Thing</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
+							<h3>Code Colaboration</h3>
+							<p>Git, Github,
+								Gitlab, TFS</p>
 						</div>
 					</section>
 				</div>
 
 				
-				<div class="box container">
+				<!-- <div class="box container">
 					<header>
 						<h2>A lot of generic stuff</h2>
 					</header>
@@ -137,7 +151,7 @@
 						</header>
 						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
 						tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-					</section>
+					</section> -->
 					<!-- <section>
 						<header>
 							<h3>Divider</h3>
@@ -261,15 +275,35 @@
 								</div>
 							</div>
 						</form> -->
-					</section>
-				</div>
+					<!-- </section>
+				</div> -->
 				
+				<div class="grid-container">
+					<div>
+						<img src="images/csharp.jpg" alt="" style="max-height:100%; max-width:100%;" />
+					</div>
+					<div>
+						<img src="images/sqlserver.jpg" alt="" style="max-height:100%; max-width:100%;" />
+					</div>
+					<div class="grid-item">
+						<div ><img src="images/Angular2.png" alt="" style="max-height:100%; max-width:100%;" /></div>
+					</div>
+					<div class="grid-item">
+							<div ><img src="images/entityframework.png" alt="" style="max-height:100%; max-width:100%;" /></div>
+					</div>  
+					<div class="grid-item">
+							<div ><img src="images/htmlcssjs.jpg" alt="" style="max-height:100%; max-width:100%;" /></div>
+					</div>
+					<div class="grid-item">
+							<div ><img src="images/gitgithub.png" alt="" style="max-height:100%; max-width:100%;" /></div>
+					</div>
+				</div>
 
 				<footer class="major container 75%">
-					<h3>Get shady with science</h3>
-					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
+					<h3>Would like to get in touch or hire me?</h3>
+					<p>Click the button below to get in touch or contact me via email using the form.</p>
 					<ul class="actions">
-						<li><a href="#" class="button">Join our crew</a></li>
+						<li><a href="tel:0873433140" class="button">Get in touch</a></li>
           </ul>
           
         </footer>
@@ -289,7 +323,7 @@
 						<h2>Questions or comments?</h2>
 					</header>
 
-					<pre>Did you like my work and would like to hire me?
+					<pre>
             Fell free to send me a message using the form below or 
             contact me through phone or linkedin
           </pre>
